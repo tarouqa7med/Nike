@@ -1,17 +1,4 @@
 
-@font-face {
-        font-family: Nunito-Regular;
-        src: url("./FontFamily/Nunito-en/Nunito-Regular.ttf");
-}
-@font-face {
-        font-family: Nunito-Light;
-        src: url("./FontFamily/Nunito-en/Nunito-Light.ttf");
-}
-@font-face {
-        font-family: Nunito-Bold;
-        src: url("./FontFamily/Nunito-en/Nunito-Bold.woff2");
-}
-
 :root {
         --firstPrimaryColor: red;
         --secondPrimaryColor: red;

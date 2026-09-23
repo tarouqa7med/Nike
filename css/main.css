@@ -10,7 +10,7 @@ header nav.navbar .image-logo {
         width: 100px;
 }
 .navbar .ul-1 li {
-        font-family: Nunito-Regular;
+        font-family: 'Nunito-Regular', sans-serif;
         letter-spacing: 1px;
         position: relative;
         z-index: 1;
@@ -110,10 +110,10 @@ header nav.navbar .image-logo {
 }
 #carouselExampleFade .carousel-item .col:first-child h5 {
         color: var(--redBlueBrown);
-        font-family: Nubito-Light;
+        font-family: 'Nunito', sans-serif;
 }
 #carouselExampleFade .carousel-item .col:first-child h2 {
-        font-family: Nubito-Bold;
+        font-family: 'Nunito', sans-serif;
         font-size: 50px;
 }
 #carouselExampleFade .carousel-item .col:first-child p {
