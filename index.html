@@ -10,196 +10,120 @@
         <link rel="icon" href="./images/first-logo.png">
         <title>Nike</title>
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
         </style>
 </head>
 <body>
-        
+
+        <nav class="navbar navbar-expand-lg w-100">
+                <div class="container-fluid">
+                        <a class="navbar-brand h-100" href="#">
+                                <img class="w-100" src="./images/first-logo.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </button>
+                        <div class="collapse navbar-collapse collapse1" id="navbarSupportedContent">
+                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                                <a class="active" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a href="#Latest">Latest</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a href="#Featured">Featured</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="collapse navbar-collapse collapse2">
+                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                        <li>
+                                                <i class="fa-solid fa-heart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fa-solid fa-shopping-cart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fa-solid fa-user"></i>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </nav>
 
         <header>
-
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                        <nav class="navbar">
-                                <div class="container d-flex justify-content-between align-items-center">
-                                        <div class="image-logo d-flex justify-content-center align-items-center">
-                                                <img class="w-100" src="./images/first-logo.png" alt="">
-                                        </div>
-                                        <div class="ul-1 d-flex justify-content-center align-items-center">
-                                                <ul class="list-unstyled d-flex m-0">
-                                                        <li class=" mx-4">
-                                                                <a href="#">Home</a>
-                                                        </li>
-                                                        <li class="mx-4">
-                                                                <a href="#">Latest</a>
-                                                        </li>
-                                                        <li class="mx-4">
-                                                                <a href="#">Featured</a>
-                                                        </li>
-                                                </ul>
-                                        </div>
-                                        <div class="ul-2 d-flex justify-content-center align-items-center">
-                                                <ul class="list-unstyled d-flex m-0">
-                                                        <li class="mx-2">
-                                                                <i class="fa-solid fa-heart"></i>
-                                                        </li>
-                                                        <li class="mx-2">
-                                                                <i class="fa-solid fa-shopping-cart"></i>
-                                                        </li>
-                                                        <li class="mx-2">
-                                                                <i class="fa-solid fa-user"></i>
-                                                        </li>
-                                                </ul>
-                                        </div>
-                                </div>
-                        </nav>
-
-                        <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                        <div class="col">
-                                                <h5>Nike Blue Shoes</h5>
+                <div class="my-carousel vh-100">
+                        <div class="my-carousel-inner h-100">
+                                <div class="my-carousel-item h-100 active" data-color="first">
+                                        <div class="col part1">
+                                                <h5 class="mainColorText">Nike Red Shoes</h5>
                                                 <h2>Nike Metcon Shoes</h2>
                                                 <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="">See More</a>
+                                                <a href="#Latest">See More</a>
                                         </div>
-                                        <div class="col">
-                                                <img src="./images/home-shoe-1.png" alt="">
+                                        <div class="col part2">
                                                 <img src="./images/home-text-1.png" alt="">
+                                                <img src="./images/home-shoe-1.png" alt="">
                                         </div>
                                 </div>
-                                <div class="carousel-item">
-                                        <div class="col">
-                                                <h5>Nike Blue Shoes</h5>
+                                <div class="my-carousel-item h-100" data-color="second">
+                                        <div class="col part1">
+                                                <h5 class="mainColorText">Nike Red Shoes</h5>
                                                 <h2>Nike Metcon Shoes</h2>
                                                 <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="">See More</a>
+                                                <a href="#Latest">See More</a>
                                         </div>
-                                        <div class="col">
-                                                <img src="./images/home-shoe-2.png" alt="">
+                                        <div class="col part2">
                                                 <img src="./images/home-text-2.png" alt="">
+                                                <img src="./images/home-shoe-2.png" alt="">
                                         </div>
                                 </div>
-                                <div class="carousel-item">
-                                        <div class="col">
-                                                <h5>Nike Blue Shoes</h5>
+                                <div class="my-carousel-item h-100" data-color="third">
+                                        <div class="col part1">
+                                                <h5 class="mainColorText">Nike Red Shoes</h5>
                                                 <h2>Nike Metcon Shoes</h2>
                                                 <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="">See More</a>
+                                                <a href="#Latest">See More</a>
                                         </div>
-                                        <div class="col">
-                                                <img src="./images/home-shoe-3.png" alt="">
+                                        <div class="col part2">
                                                 <img src="./images/home-text-3.png" alt="">
+                                                <img src="./images/home-shoe-3.png" alt="">
                                         </div>
                                 </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <button class="btn prev">
                                 <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <button class="btn next">
                                 <i class="fa-solid fa-chevron-right"></i>
                         </button>
                 </div>
-
         </header>
 
-        <div class="twoImages">
-                <div class="col">
-                        <a href="">
-                                <img class="w-100" src="./images/home-banner-1.png" alt="">
-                        </a>
+        <section class="offers w-100 d-flex">
+                <div class="col w-50 overflow-hidden">
+                        <img class="w-100 h-100" src="./images/home-banner-1.png" alt="">
                 </div>
-                <div class="col">
-                        <a href="">
-                                <img class="w-100" src="./images/home-banner-2.png" alt="">
-                        </a>
-                </div>
-        </div>
-
-        <section>
-                <div class="container">
-                        <div class="firstLayout">
-                                <div class="heading">
-                                        <img src="" alt="">
-                                        <h4></h4>
-                                </div>
-                                <div class="layout">
-                                        <div class="row">
-                                                <div class="col">
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <img src="" alt="">
-                                                </div>
-                                                <div class="col">
-                                                        <h3></h3>
-                                                        <p></p>
-                                                        <p class="price">Price : <span><span>120<sup>$</sup></span> 96$</span></p>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                                <div class="col">
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <img src="" alt="">
-                                                </div>
-                                                <div class="col">
-                                                        <h3></h3>
-                                                        <p></p>
-                                                        <p class="price">Price : <span><span>120<sup>$</sup></span> 96$</span></p>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                                <div class="col">
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <img src="" alt="">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <img src="" alt="">
-                                                </div>
-                                                <div class="col">
-                                                        <h3></h3>
-                                                        <p></p>
-                                                        <p class="price">Price : <span><span>120<sup>$</sup></span> 96$</span></p>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+                <div class="col w-50 overflow-hidden">
+                        <img class="w-100 h-100" src="./images/home-banner-2.png" alt="">
                 </div>
         </section>
 
+        <section class="latest" id="Latest">
+                <div class="container">
+
+                </div>
+        </section>
+
+        <section class="featured" id="Featured">
+                <div class="container"></div>
+        </section>
+
         <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="./js/functions.js"></script>
         <script src="./js/main.js"></script>
 </body>
 </html>

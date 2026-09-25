@@ -1,6 +1,17 @@
 
 :root {
-        --firstPrimaryColor: red;
-        --secondPrimaryColor: red;
-        --redBlueBrown: red;
+        --mainColor: #fb2527;
+        --firstColor: #fb2527;
+        --secondColor: #0f7ad7;
+        --thirdColor: #ed9721;
+}
+.mainColorText {
+        color: var(--mainColor);
+}
+.mainColorBgColor {
+        color: var(--mainColor);
+}
+body {
+        font-family: 'Nunito', sans-serif;
+        height: 5000px;
 }
