@@ -4,7 +4,9 @@ let carousel = document.querySelector(".my-carousel"),
         nextBtn = carousel.querySelector("button.next"),
         prevBtn = carousel.querySelector("button.prev"),
         html = document.querySelector("html"),
-        navbar=document.querySelector("nav.navbar");
+        navbar = document.querySelector("nav.navbar"),
+        latestLayout = document.querySelector(".latest .layout"),
+        featuredLayout = document.querySelector(".featured .layout");
 
 nextBtn.addEventListener("click", function () {
 
@@ -15,8 +17,7 @@ nextBtn.addEventListener("click", function () {
                 currentCarouselItem.classList.remove("active");
                 nextCarouselItem.classList.add("active");
 
-        colorChanger(dataColor);
-        logoChanger(dataColor);
+        themeChanger(dataColor, dataColor, dataColor);
 })
 
 prevBtn.addEventListener("click", function () {
@@ -26,11 +27,13 @@ prevBtn.addEventListener("click", function () {
 
         currentCarouselItem.classList.remove("active");
         prevCarouselItem.classList.add("active");
-        
-        colorChanger(dataColor);
-        logoChanger(dataColor);
+
+        themeChanger(dataColor, dataColor, dataColor);
 })
 
 window.addEventListener("scroll", function () {
         
 })
+
+window.onload = getLatestShoesData;
+

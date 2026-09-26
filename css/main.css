@@ -9,6 +9,11 @@
         background: linear-gradient(to right, rgba(234, 234, 234, .5), rgba(219, 219, 219, .5), rgba(242, 242, 242, .5), rgba(173, 169, 150, .5));
         box-shadow: 0 0 10px 5px rgba(var(--bs-emphasis-color-rgb), 0.1);
 }
+.navbar.scrolled {
+        background: #ada996;
+        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
 .navbar .container-fluid {
         width: 85%;
         display: flex;
@@ -257,12 +262,177 @@ visibility: visible;
         right: 135%;
 }
 .offers .col img {
-        transform: scale(1.2);
+        transform: scale(1.1);
         transition-duration: 1s;
 }
 .offers .col:hover img {
         transform: scale(1);
 }
 
-/* ---------- OFFERS SECTION ---------- */
+/* ---------- SHARED SECTION (LATEST & FEATURED) ---------- */
+
+.latest, .featured {
+        background: #ada996;
+        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
+.featured {
+        padding-top: 0 !important;
+}
+.container .heading {
+        width: 100%;
+        position: relative;
+        height: 100px;
+}
+.container .heading h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: drop-shadow( 2px 2px 1px #00000080);
+        letter-spacing: 2px;
+        z-index: 1;
+}
+.container .heading img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 275px;
+}
+
+/* ---------- LATEST SECTION ---------- */
+
+.latest .container .layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+}
+.latest .container .layout .col {
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        border: 1px solid var(--mainColor);
+        border-radius: 10px;
+}
+.latest .container .layout .col .item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.latest .container .layout .col .item .div1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.latest .container .layout .col .item .div1 .products-imgs {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 85px;
+        height: 100%;
+}
+.latest .container .layout .col .item .div1 .products-imgs .row {
+        background-color: transparent;
+        border: 1px solid var(--mainColor);
+        border-radius: 6px;
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+}
+.latest .container .layout .col .item .div1 .products-imgs .row img {
+        transition-duration: 500ms;
+}
+.latest .container .layout .col .item .div1 .products-imgs .row:hover img {
+        transform: scale(1.25);
+}
+.latest .container .layout .col .item .div1 > img {
+        height: 90%;
+        transition-duration: 500ms;
+}
+.latest .container .layout .col .item .div1 > img:hover {
+        transform: scale(1.15);
+}
+.latest .container .layout .col .item .div2 {
+        position: relative;
+        width: 50%;
+}
+.latest .container .layout .col .item .div2 h4 {
+        font-size: 28px;
+        color: var(--mainColor);
+}
+.latest .container .layout .col .item .div2 p.description {
+        color: #777777;
+}
+.latest .container .layout .col .item .div2 .price,
+.latest .container .layout .col .item .div2 .size {
+        display: flex;
+}
+.latest .container .layout .col .item .div2 .price p:nth-child(1),
+.latest .container .layout .col .item .div2 .size p {
+        font-weight: 900;
+}
+.latest .container .layout .col .item .div2 .price p:nth-child(2) {
+        margin-left: 10px;
+        color: var(--mainColor);
+        text-decoration: line-through;
+}
+.latest .container .layout .col .item .div2 .price p:nth-child(3) {
+        margin-left: 5px;
+}
+.latest .container .layout .col .item .div2 .size ul {
+        margin-left: 20px;
+        display: flex;
+        gap: 10px;
+}
+.latest .container .layout .col .item .div2 .size ul li button {
+        padding: 0;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: 1px solid var(--mainColor);
+        border-radius: 6px;
+        transition-duration: 500ms;
+}
+.latest .container .layout .col .item .div2 .size ul li button:focus {
+        background-color: var(--mainColor);
+        color: white;
+}
+.latest .container .layout .col .item .div2 button.addToCartBtn {
+        background-color: transparent;
+        color: var(--mainColor);
+        border: 1px solid var(--mainColor);
+        border-radius: 6px;
+        text-transform: capitalize;
+        transition-duration: 500ms;
+}
+.latest .container .layout .col .item .div2 button.addToCartBtn:hover {
+        background-color: var(--mainColor);
+        color: white;
+}
+.latest .container .layout .col .item .div2 button.addToCartBtn:active {
+        background-color: transparent;
+        color: black;
+        border-color: black;
+}
+
+/* ---------- FEATURED SECTION ---------- */
 
