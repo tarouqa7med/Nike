@@ -21,8 +21,6 @@ function logoChanger(logo) {
         newImageSrc = navbarLogoImageArr.join("/");
         
         navbarLogoImage.setAttribute("src", newImageSrc);
-
-        console.log(navbarLogoImage)
 }
 
 function correctLogoChanger(correct) {
@@ -50,8 +48,6 @@ function themeChanger(color, logo, correct) {
 
 function getLatestShoesData() {
 
-        let latestLayout = document.querySelector(".latest .layout"),
-                latestImages = latestLayout.querySelectorAll(".products-imgs .row img");
         for (let index = 0; index < latest.length; index++) {
 
                 let newPriceAfterDiscount = latest[index].price * (1 - latest[index].discount),
@@ -108,10 +104,47 @@ function getLatestShoesData() {
                 imageIndex = 0;
                 sizeIndex = 0;
         }
-        console.log(latestLayout)
 }
 
 function ChangeViewedImage(imageNumber) {
-        imageNumber=
+        imageNumber = document.querySelector(`.latest .row img[data-image-number="${imageNumber}"]`);
+        console.log(imageNumber)
+}
 
+function checkScrolled() {
+        if (window.scrollY >= 10) {
+                navbar.classList.add("scrolled");
+        } else {
+                navbar.classList.remove("scrolled");
+        }
+}
+
+function updateActiveLink() {
+
+        let currentNavLink = navbar.querySelector(".nav-item a.active"),
+                currentID = navLink.getAttribute("href"),
+                currentSection = document.querySelector(currentID),
+                sectionTop = currentSection.offsetTop;
+        
+        currentNavLink.classList.remove("active");
+        navLink.classList.add("active");
+
+        return sectionTop;
+}
+
+function updateNavLink(section_ID) {
+
+        let section = document.querySelector(`#${section_ID}`),
+                sectionTop = section.offsetTop - navbar.clientHeight,
+                sectionHieght = section.clientHeight,
+                sectionBTM = sectionTop + sectionHieght;
+
+        if (window.scrollY >= sectionTop && window.scrollY <= sectionBTM) {
+                let sectionID = section.getAttribute("id"),
+                        navLinkOfSection = document.querySelector(`a[href="#${sectionID}"]`),
+                        currentActiveLink=document.querySelector(".nav-item a.active");
+                
+                currentActiveLink.classList.remove("active");
+                navLinkOfSection.classList.add("active");
+        }
 }

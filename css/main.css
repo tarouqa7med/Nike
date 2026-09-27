@@ -1,5 +1,19 @@
 
-
+.loadingPage {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        position: fixed;
+        z-index: 9999;
+        transition-duration: 1s;
+}
+.loadingPage.hide {
+        opacity: 0;
+}
 .navbar {
         position: fixed;
         z-index: 1000;
@@ -275,9 +289,8 @@ visibility: visible;
         background: #ada996;
         background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
         background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-}
-.featured {
-        padding-top: 0 !important;
+        padding-top: 35px;
+        padding-bottom: 10px;
 }
 .container .heading {
         width: 100%;

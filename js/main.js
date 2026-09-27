@@ -5,8 +5,16 @@ let carousel = document.querySelector(".my-carousel"),
         prevBtn = carousel.querySelector("button.prev"),
         html = document.querySelector("html"),
         navbar = document.querySelector("nav.navbar"),
+        navLinks = navbar.querySelectorAll(".nav-item a"),
         latestLayout = document.querySelector(".latest .layout"),
-        featuredLayout = document.querySelector(".featured .layout");
+        latestImages = latestLayout.querySelectorAll(".products-imgs .row img"),
+        featuredLayout = document.querySelector(".featured .layout"),
+        sections = document.querySelectorAll("section, header"),
+        loadingPage = document.querySelector(".loadingPage");
+
+
+checkScrolled();
+getLatestShoesData()
 
 nextBtn.addEventListener("click", function () {
 
@@ -14,8 +22,8 @@ nextBtn.addEventListener("click", function () {
                 nextCarouselItem = currentCarouselItem.nextElementSibling ?? carousel_inner.querySelector(".my-carousel-item:first-child"),
                 dataColor = nextCarouselItem.dataset.color;
                 
-                currentCarouselItem.classList.remove("active");
-                nextCarouselItem.classList.add("active");
+        currentCarouselItem.classList.remove("active");
+        nextCarouselItem.classList.add("active");
 
         themeChanger(dataColor, dataColor, dataColor);
 })
@@ -31,9 +39,36 @@ prevBtn.addEventListener("click", function () {
         themeChanger(dataColor, dataColor, dataColor);
 })
 
+
 window.addEventListener("scroll", function () {
-        
+        checkScrolled();
+
+        sections.forEach(function (section) {
+                updateNavLink(section.id);
+        })
 })
 
-window.onload = getLatestShoesData;
+navLinks.forEach(function (navLink) {
+        navLink.addEventListener("click", function (event) {
+                event.preventDefault();
 
+                let currentNavLink = navbar.querySelector(".nav-item a.active"),
+                        currentID = navLink.getAttribute("href"),
+                        currentSection = document.querySelector(currentID),
+                        sectionTop = currentSection.offsetTop;
+                
+                navLink.classList.add("active")
+                currentNavLink.classList.remove("active");
+
+                window.scrollTo(0, sectionTop - navbar.clientHeight);
+        })
+})
+
+window.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+                loadingPage.classList.add("hide");
+        }, 1500);
+        setTimeout(() => {
+                loadingPage.classList.add("d-none");
+        }, 2501);
+})
