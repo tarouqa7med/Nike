@@ -135,7 +135,7 @@ features.forEach(function (product) {
                                                 <div class="selected-image">
                                                         <img class="img-fluid" src="./images/products/${product.images[0]}" alt="">
                                                 </div>
-                                                <i class="fa-solid fa-search search-icon pb-0 mb-3"></i>
+                                                <i class="fa-solid fa-search search-icon pb-0 mb-3" onclick="openModal('product')"></i>
                                                 <ul class="list-unstyled d-flex column-gap-2">
                                                         ${loadingLi(product.images)}
                                                 </ul>

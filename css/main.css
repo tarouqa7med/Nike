@@ -438,33 +438,37 @@
         background-color: var(--mainColor);
 }
 
+/* MODAL OF PRODUCT IN FEATURED SECTION */
+
+#Featured .content .row
+
 /* ----------   MODAL SECTION ---------- */
 
-.shopping-cart {
-        width: 100%;
-        height: 100vh;
-        padding: 50px 16px 40px 16px;
+.modal {
+        position: fixed;
+        top: 0;
+        left: 0;
         background-color: #00000080;
         display: none;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
         z-index: 10000;
         transition-duration: 500ms;
         opacity: 0;
         overflow-y: auto;
 }
-.shopping-cart.active {
+.modal.active {
         display: block;
 }
-.shopping-cart.show {
+.modal.user-login.active {
+        display: flex;
+}
+.modal.show {
         opacity: 1;
 }
-.shopping-cart .container {
+.modal .container {
         position: relative;
-        width: 100%;
+        width: 80%;
         min-width: 250px;
         max-width: 750px;
         margin: 0 auto;
@@ -472,23 +476,28 @@
         background: #ada996;
         background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
         background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-        border-radius: 10px;
         transform: translateY(-150%);
         transition-duration: 500ms;
         opacity: 0;
 }
-.shopping-cart .container.show {
+.modal.user-login .container {
+        min-width: 250px;
+        max-width: 400px;
+}
+.modal .container.show {
         transform: translateY(0%);
         opacity: 1;
 }
-.shopping-cart .container .close {
+.modal .container .close {
         position: absolute;
         top: 20px;
         right: 20px;
         font-size: 25px;
         cursor: pointer;
-        color: var(--mainColor);
 }
+
+/* SHOPPING MODAL */
+
 .shopping-cart .container h2 {
         color: var(--mainColor);
         text-align: center;
@@ -572,50 +581,8 @@
         color: white;
 }
 
-/* ----------   USER-LOGIN SECTION ---------- */
+/* USER-LOGIN MODAL */
 
-.user-login {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #00000080;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-        transition-duration: 500ms;
-        overflow: auto;
-        opacity: 0;
-}
-.user-login.active {
-        display: flex;
-}
-.user-login.show {
-        opacity: 1;
-}
-.user-login .container {
-        width: 80%;
-        min-width: 250px;
-        max-width: 400px;
-        background: #ada996;
-        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
-        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-        transform: translateY(-150%);
-        position: relative;
-        transition-duration: 500ms;
-        opacity: 0;
-}
-.user-login .container.show {
-        transform: translateY(0%);
-        opacity: 1;
-}
-.user-login .container .close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 25px;
-        cursor: pointer;
-}
 .user-login .container .body form.list-group {
         display: flex;
         justify-content: center;

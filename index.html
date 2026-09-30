@@ -151,9 +151,9 @@
                 </div>
         </section>
 
-        <div class="modal shopping-cart" data-modal-name="shopping-cart" onclick="closeModal('shopping-cart');">
-                <div class="container p-3">
-                        <i class="close fa-regular fa-times-circle" onclick="closeModal('shopping-cart');"></i>
+        <div class="modal shopping-cart w-100 vh-100" data-modal-name="shopping-cart" onclick="closeModal('shopping-cart');">
+                <div class="container p-3 rounded-3">
+                        <i class="close fa-regular fa-times-circle mainColor" onclick="closeModal('shopping-cart');"></i>
                         <h2>Shop</h2>
                         <p class="alert alert-warning w-100 text-center fs-6">There are no products</p>
                         <div class="list-group">
@@ -171,10 +171,26 @@
                         </div>
                         <div class="body">
                                 <form action="" class="list-group">
-                                        <div class="list-group-item w-100 bg-transparent border-0 p-0">
+                                        <div class="list-group-item w-100 border-0 p-0">
                                                 <input class="form-control" name="username" type="text" placeholder="UserName *" class="w-100 p-2" required>
                                         </div>
-                                        <div class="list-group-item w-100 bg-transparent border-0 p-0">
+                                        <div class="list-group-item w-100 border-0 p-0">
+                                                <input class="form-control" name="password" type="password" placeholder="Password *" class="w-100 p-2" required>
+                                        </div>
+                                        <button class="btn mainBorder buyNow w-100"><span>Login</span></button>
+                                </form>
+                        </div>
+                </div>
+        </div>
+
+        <div class="modal dataOfProduct w-100 vh-100" data-modal-name="product" onclick="closeModal('product');">
+                <div class="container p-3 rounded-3">
+                        <div class="body">
+                                <form action="" class="list-group">
+                                        <div class="list-group-item w-100 border-0 p-0">
+                                                <input class="form-control" name="username" type="text" placeholder="UserName *" class="w-100 p-2" required>
+                                        </div>
+                                        <div class="list-group-item w-100 border-0 p-0">
                                                 <input class="form-control" name="password" type="password" placeholder="Password *" class="w-100 p-2" required>
                                         </div>
                                         <button class="btn mainBorder buyNow w-100"><span>Login</span></button>
