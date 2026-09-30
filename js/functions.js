@@ -3,7 +3,7 @@ function openModal(modalName) {
 
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         
-        let modal = document.querySelector(`.modal[data-modal-name="${modalName}"]`),
+        let modal = document.querySelector(`div[data-modal-name="${modalName}"]`),
                 modalContainer = modal.firstElementChild;
         
         document.body.classList.add("no-scroll");
@@ -21,9 +21,9 @@ function openModal(modalName) {
         }, 500) // wait another 500ms to show modalContainer after activating modal.
 }
 
-function closeModal(modalName) {
+function closeModal() {
 
-        let modal = document.querySelector(".modal.active"),
+        let modal = document.querySelector("div.modal.active"),
                 modalContainer = modal.firstElementChild;
 
         modalContainer.classList.remove("show"); //firstly, remove show modalContainer.
