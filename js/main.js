@@ -149,3 +149,11 @@ features.forEach(function (product) {
                 </div>
         `;
 })
+
+let modalContainers = document.querySelectorAll(".modal .container");
+
+modalContainers.forEach(function(modalContainer) {
+        modalContainer.addEventListener("click", function (event) {
+                event.stopPropagation();
+        })
+})

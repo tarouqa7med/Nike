@@ -47,10 +47,10 @@
                                         <li>
                                                 <i class="fa-solid fa-heart"></i>
                                         </li>
-                                        <li onclick="openCartShopping()">
+                                        <li onclick="openModal('shopping-cart')">
                                                 <i class="fa-solid fa-shopping-cart"></i>
                                         </li>
-                                        <li onclick="openUserLogin()">
+                                        <li onclick="openModal('user-login')">
                                                 <i class="fa-solid fa-user"></i>
                                         </li>
                                 </ul>
@@ -151,9 +151,9 @@
                 </div>
         </section>
 
-        <div class="shopping-cart">
+        <div class="modal shopping-cart" data-modal-name="shopping-cart" onclick="closeModal('shopping-cart');">
                 <div class="container p-3">
-                        <i class="close fa-regular fa-times-circle" onclick="closeCartShopping()"></i>
+                        <i class="close fa-regular fa-times-circle" onclick="closeModal('shopping-cart');"></i>
                         <h2>Shop</h2>
                         <p class="alert alert-warning w-100 text-center fs-6">There are no products</p>
                         <div class="list-group">
@@ -163,19 +163,21 @@
                 </div>
         </div>
 
-        <div class="user-login">
-                <div class="container p-3">
-                        <div class="close fa-regular fa-times-circle" onclick="closeUserLogin()"></div>
-                        <h2>Login</h2>
-                        <div>
+        <div class="modal user-login w-100 vh-100" data-modal-name="user-login" onclick="closeModal('user-login');">
+                <div class="container p-3 rounded-3">
+                        <div class="head">
+                                <div class="close fa-regular fa-times-circle mainColor" onclick="closeModal('user-login');"></div>
+                                <h2 class="mainColor text-center pb-3 mt-2">Login</h2>
+                        </div>
+                        <div class="body">
                                 <form action="" class="list-group">
                                         <div class="list-group-item w-100 bg-transparent border-0 p-0">
-                                                <input type="text" placeholder="UserName *" class="w-100 p-2">
+                                                <input class="form-control" name="username" type="text" placeholder="UserName *" class="w-100 p-2" required>
                                         </div>
                                         <div class="list-group-item w-100 bg-transparent border-0 p-0">
-                                                <input type="password" placeholder="Password *" class="w-100 p-2">
+                                                <input class="form-control" name="password" type="password" placeholder="Password *" class="w-100 p-2" required>
                                         </div>
-                                        <button class="btn btn-success buyNow w-100">Login</button>
+                                        <button class="btn mainBorder buyNow w-100"><span>Login</span></button>
                                 </form>
                         </div>
                 </div>
@@ -187,29 +189,3 @@
         <script src="./js/main.js"></script>
 </body>
 </html>
-
-
-
-
-<!-- <div class="list-group-item">
-                                        <div class="item">
-                                                <div class="image">
-                                                        <img class="w-100" src="./images/products/10-1.png" alt="">
-                                                </div>
-                                                <h2 class="name"></h2>
-                                                <div class="price">
-                                                        <p>Price :</p>
-                                                        <p>120 <sup>$</sup></p>
-                                                        <p>96 <sup>$</sup></p>
-                                                </div>
-                                                <div class="size">
-                                                        <p>Size :</p>
-                                                        <span class="item-size">S</span>
-                                                </div>
-                                                <div class="color">
-                                                        <p>Color :</p>
-                                                        <span class="item-color"></span>
-                                                </div>
-                                                <button class="btn btn-danger w-100 removeBtn" onclick="removeItem(this)">Remove</button>
-                                        </div>
-                                </div> -->

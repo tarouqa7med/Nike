@@ -1,4 +1,45 @@
 
+function openModal(modalName) {
+
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        
+        let modal = document.querySelector(`.modal[data-modal-name="${modalName}"]`),
+                modalContainer = modal.firstElementChild;
+        
+        document.body.classList.add("no-scroll");
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+        navbar.style.paddingRight = `${scrollbarWidth}px`;
+        modal.style.paddingRight = `${scrollbarWidth}px`;
+        
+        modal.classList.add("active"); // firstly, show modal.
+
+        setTimeout(function () {
+                modal.classList.add("show");
+        }, 1) // wait 1ms to show modal after activating it.
+        setTimeout(function() {
+                modalContainer.classList.add("show");
+        }, 500) // wait another 500ms to show modalContainer after activating modal.
+}
+
+function closeModal(modalName) {
+
+        let modal = document.querySelector(".modal.active"),
+                modalContainer = modal.firstElementChild;
+
+        modalContainer.classList.remove("show"); //firstly, remove show modalContainer.
+
+        setTimeout(() => {
+                modal.classList.remove("show");
+                document.body.classList.remove("no-scroll");
+                document.body.style.paddingRight = '0px';
+                navbar.style.paddingRight = '0px';        
+                modal.style.paddingRight = '0px';
+        }, 500); // wait 1s to remove show modal.
+        setTimeout(() => {
+                modal.classList.remove("active");
+        }, 1001); // wait another 1s to set modal inactive after hiding it.  
+}
+
 function colorChanger(color) {
 
         let currentColor = getComputedStyle(html).getPropertyValue(`--${color}Color`);
@@ -108,7 +149,7 @@ function loadingSizes(sizesList) {
 
         let li_Sizes = "";
         sizesList.forEach(function (size, index) {
-                li_Sizes += `<li class="mainBorder mainColor rounded-2 ${(index == 0) ? 'active' : ''}">${size}</li>`;
+                li_Sizes += `<li class="mainBorder mainColor rounded-2 ${(index == 0) ? 'active' : ''}" onclick="changeActive(this)">${size}</li>`;
         })
         return li_Sizes;
 }

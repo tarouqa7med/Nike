@@ -22,9 +22,15 @@
 .mainButton:hover {
         background-color: color-mix( in srgb, var(--mainColor) 25%, transparent 75%);
 }
+html {
+        scrollbar-color: var(--mainColor) color-mix( in srgb, var(--mainColor) 35%, transparent 65%);
+}
 body {
         font-family: 'Nunito', sans-serif;
         position: relative;
+        background: #ada996;
+        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
 }
 body.no-scroll {
         overflow: hidden;

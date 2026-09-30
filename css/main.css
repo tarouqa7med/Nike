@@ -295,9 +295,6 @@
 /* ---------- SHARED SECTION (LATEST & FEATURED) ---------- */
 
 .latest, .featured {
-        background: #ada996;
-        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
-        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
         padding-top: 25px;
         padding-bottom: 10px;
 }
@@ -365,6 +362,7 @@
 .size ul li.active {
         background-color: var(--mainColor);
         color: white;
+        font-weight: bold;
 }
 #Latest .product .addToCartBtn {
         border: 1px solid var(--mainColor);
@@ -440,7 +438,7 @@
         background-color: var(--mainColor);
 }
 
-/* ----------   SHOPPING-CART SECTION ---------- */
+/* ----------   MODAL SECTION ---------- */
 
 .shopping-cart {
         width: 100%;
@@ -454,7 +452,7 @@
         top: 0;
         left: 0;
         z-index: 10000;
-        transition-duration: 1s;
+        transition-duration: 500ms;
         opacity: 0;
         overflow-y: auto;
 }
@@ -475,11 +473,13 @@
         background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
         background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
         border-radius: 10px;
-        transform: translateY(-500%);
-        transition-duration: 1s;
+        transform: translateY(-150%);
+        transition-duration: 500ms;
+        opacity: 0;
 }
 .shopping-cart .container.show {
         transform: translateY(0%);
+        opacity: 1;
 }
 .shopping-cart .container .close {
         position: absolute;
@@ -575,17 +575,15 @@
 /* ----------   USER-LOGIN SECTION ---------- */
 
 .user-login {
-        width: 100%;
-        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
         background-color: #00000080;
         display: none;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
         z-index: 10000;
-        transition-duration: 1s;
+        transition-duration: 500ms;
         overflow: auto;
         opacity: 0;
 }
@@ -596,17 +594,20 @@
         opacity: 1;
 }
 .user-login .container {
-        width: 400px;
+        width: 80%;
+        min-width: 250px;
+        max-width: 400px;
         background: #ada996;
         background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
         background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
-        border-radius: 10px;
-        transform: translateY(-500%);
+        transform: translateY(-150%);
         position: relative;
-        transition-duration: 1s;
+        transition-duration: 500ms;
+        opacity: 0;
 }
 .user-login .container.show {
         transform: translateY(0%);
+        opacity: 1;
 }
 .user-login .container .close {
         position: absolute;
@@ -614,22 +615,16 @@
         right: 20px;
         font-size: 25px;
         cursor: pointer;
-        color: var(--mainColor);
 }
-.user-login .container h2 {
-        color: var(--mainColor);
-        text-align: center;
-        padding-bottom: 25px;
-}
-.user-login .container .list-group {
+.user-login .container .body form.list-group {
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         flex-direction: row;
         gap: 15px;
 }
-.user-login .container .list-group .list-group-item {
+.user-login .container .body form.list-group .list-group-item {
         width: calc((100% - 30px) / 3);
         border-radius: 10px;
         display: flex;
@@ -637,12 +632,58 @@
         align-items: center;
         flex-direction: column;
 }
-.user-login .container .list-group .list-group-item input {
-        border: 1px solid transparent;
+.user-login .container .body form.list-group .list-group-item input {
+        border: 1.5px solid color-mix(in srgb, var(--mainColor) 50%, #00000080 50%);
         transition-duration: 500ms;
         border-radius: 8px;
 }
-.user-login .container .list-group .list-group-item input:focus {
-        border: 1px solid rgb(134, 183, 254);
+.user-login .container .body form.list-group .list-group-item input:focus {
+        box-shadow: 0 0 0 5px color-mix(in srgb, var(--mainColor) 50%, transparent 50%);
+        border: 1.5px solid color-mix(in srgb, var(--mainColor) 50%, black 50%);
         outline: none;
+}
+.user-login .container .body form.list-group button {
+        position: relative;
+        background-color: var(--mainColor);
+        overflow: hidden;
+}
+.user-login .container .body form.list-group button:hover {
+        border: 1px solid var(--mainColor);
+}
+.user-login .container .body form.list-group button::before,
+.user-login .container .body form.list-group button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        height: 100%;
+        background-color: color-mix(in srgb, var(--mainColor) 80%, black 50%);
+        transform: translate(-200%, -50%) skew(45deg);
+        transition-duration: 500ms;
+}
+.user-login .container .body form.list-group button:hover::before {
+        transform: translate(-100%, -50%) skew(45deg);
+}
+.user-login .container .body form.list-group button::after {
+        transform: translate(100%, -50%) skew(45deg);
+}
+.user-login .container .body form.list-group button:hover::after {
+        transform: translate(0%, -50%) skew(45deg);
+}
+.user-login .container .body form.list-group button:focus::before,
+.user-login .container .body form.list-group button:focus::after {
+        background-color: color-mix(in srgb, var(--mainColor) 70%, black 60%);
+
+}
+.user-login .container .body form.list-group button span {
+        position: relative;
+        z-index: 1;
+        color: white;
+        transition-duration: 500ms;
+        font-weight: bold;
+        letter-spacing: 1px;
+}
+.user-login .container .body form.list-group button:hover span {
+        filter: drop-shadow(0 0 1px white);
 }
