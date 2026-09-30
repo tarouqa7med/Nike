@@ -15,9 +15,9 @@
 </head>
 <body>
 
-        <div class="loadingPage">
+        <!-- <div class="loadingPage">
                 <img src="./images/nike.gif" alt="">
-        </div>
+        </div> -->
 
         <nav class="navbar navbar-expand-lg w-100">
                 <div class="container-fluid">
@@ -47,10 +47,10 @@
                                         <li>
                                                 <i class="fa-solid fa-heart"></i>
                                         </li>
-                                        <li>
+                                        <li onclick="openCartShopping()">
                                                 <i class="fa-solid fa-shopping-cart"></i>
                                         </li>
-                                        <li>
+                                        <li onclick="openUserLogin()">
                                                 <i class="fa-solid fa-user"></i>
                                         </li>
                                 </ul>
@@ -62,39 +62,45 @@
                 <div class="my-carousel vh-100">
                         <div class="my-carousel-inner h-100">
                                 <div class="my-carousel-item h-100 active" data-color="first">
-                                        <div class="col part1">
-                                                <h5 class="mainColorText">Nike Red Shoes</h5>
-                                                <h2>Nike Metcon Shoes</h2>
-                                                <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="#Latest">See More</a>
-                                        </div>
-                                        <div class="col part2">
-                                                <img src="./images/home-text-1.png" alt="">
-                                                <img src="./images/home-shoe-1.png" alt="">
+                                        <div class="container">
+                                                <div class="col part1">
+                                                        <h5 class="mainColor">Nike Red Shoes</h5>
+                                                        <h2>Nike Metcon Shoes</h2>
+                                                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                                                        <a href="#Latest">See More</a>
+                                                </div>
+                                                <div class="col part2">
+                                                        <img src="./images/home-text-1.png" alt="">
+                                                        <img src="./images/home-shoe-1.png" alt="">
+                                                </div>
                                         </div>
                                 </div>
                                 <div class="my-carousel-item h-100" data-color="second">
-                                        <div class="col part1">
-                                                <h5 class="mainColorText">Nike Red Shoes</h5>
-                                                <h2>Nike Metcon Shoes</h2>
-                                                <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="#Latest">See More</a>
-                                        </div>
-                                        <div class="col part2">
-                                                <img src="./images/home-text-2.png" alt="">
-                                                <img src="./images/home-shoe-2.png" alt="">
+                                        <div class="container">
+                                                <div class="col part1">
+                                                        <h5 class="mainColor">Nike Red Shoes</h5>
+                                                        <h2>Nike Metcon Shoes</h2>
+                                                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                                                        <a href="#Latest">See More</a>
+                                                </div>
+                                                <div class="col part2">
+                                                        <img src="./images/home-text-2.png" alt="">
+                                                        <img src="./images/home-shoe-2.png" alt="">
+                                                </div>
                                         </div>
                                 </div>
                                 <div class="my-carousel-item h-100" data-color="third">
-                                        <div class="col part1">
-                                                <h5 class="mainColorText">Nike Red Shoes</h5>
-                                                <h2>Nike Metcon Shoes</h2>
-                                                <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
-                                                <a href="#Latest">See More</a>
-                                        </div>
-                                        <div class="col part2">
-                                                <img src="./images/home-text-3.png" alt="">
-                                                <img src="./images/home-shoe-3.png" alt="">
+                                        <div class="container">
+                                                <div class="col part1">
+                                                        <h5 class="mainColor">Nike Red Shoes</h5>
+                                                        <h2>Nike Metcon Shoes</h2>
+                                                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                                                        <a href="#Latest">See More</a>
+                                                </div>
+                                                <div class="col part2">
+                                                        <img src="./images/home-text-3.png" alt="">
+                                                        <img src="./images/home-shoe-3.png" alt="">
+                                                </div>
                                         </div>
                                 </div>
                         </div>
@@ -105,135 +111,75 @@
                                 <i class="fa-solid fa-chevron-right"></i>
                         </button>
                 </div>
-                <div class="offers w-100 d-flex">
-                        <div class="col w-50 overflow-hidden">
-                                <img class="w-100 h-100" src="./images/home-banner-1.png" alt="">
-                        </div>
-                        <div class="col w-50 overflow-hidden">
-                                <img class="w-100 h-100" src="./images/home-banner-2.png" alt="">
+                <div class="Offers">
+                        <div class="row g-0">
+                                <div class="col-lg-6 part1">
+                                        <div class="item">
+                                                <img class="img-fluid w-100" src="./images/home-banner-1.png" alt="">
+                                        </div>
+                                </div>
+                                <div class="col-lg-6 part2">
+                                        <div class="item">
+                                                <img class="img-fluid w-100" src="./images/home-banner-2.png" alt="">
+                                        </div>
+                                </div>
                         </div>
                 </div>
         </header>
 
-
         <section class="latest" id="Latest">
                 <div class="container">
-                        <div class="heading">
+                        <div class="heading mb-4 w-100">
                                 <h2>LATEST PRODUCTS</h2>
                                 <img src="./images/first-correct.png" alt="">
                         </div>
-                        <div class="layout my-5">
-                                <!-- <div class="col">
-                                        <div class="item p-4">
-                                                <div class="div1 w-50 h-100">
-                                                        <div class="products-imgs">
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-1.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-2.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-3.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-4.png" alt="">
-                                                                </div>
-                                                        </div>
-                                                        <img src="./images/products/17-1.png" alt="">
-                                                </div>
-                                                <div class="div2 w-50 h-100">
-                                                        <h4>New Nike Black Airmax Shoes</h4>
-                                                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi modi minus eum debitis in? Aliquid doloribus, omnis eveniet inventore quod delectus dolores quia illum itaque dolorem, fuga recusandae at minus eum. Dolore exercitationem hic fugiat. Eaque, inventore soluta sunt voluptates nisi esse. Reprehenderit dolorem qui, dolores asperiores fuga illo eligendi!</p>
-                                                        <div class="price">
-                                                                <p>Price :</p>
-                                                                <p>120 <sup>$</sup></p>
-                                                                <p>96 <sup>$</sup></p>
-                                                        </div>
-                                                        <div class="size">
-                                                                <p>Size :</p>
-                                                                <ul class="list-unstyled">
-                                                                        <li>
-                                                                                <button>S</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>M</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>L</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>XL</button>
-                                                                        </li>
-                                                                </ul>
-                                                        </div>
-                                                        <button class="btn py-2 px-3 addToCartBtn">add to cart</button>
-                                                </div>
-                                        </div>
-                                </div> -->
+                        <div class="content">
                         </div>
                 </div>
         </section>
         
         <section class="featured" id="Featured">
                 <div class="container">
-                        <div class="heading">
+                        <div class="heading mb-5">
                                 <h2>FEATURED PRODUCTS</h2>
                                 <img src="./images/first-correct.png" alt="">
                         </div>
-                        <div class="layout">
-                                <div class="layout my-5">
-                                <div class="col">
-                                        <div class="item p-4">
-                                                <div class="div1 w-50 h-100">
-                                                        <div class="products-imgs">
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-1.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-2.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-3.png" alt="">
-                                                                </div>
-                                                                <div class="row">
-                                                                        <img src="./images/products/17-4.png" alt="">
-                                                                </div>
-                                                        </div>
-                                                        <img src="./images/products/17-1.png" alt="">
-                                                </div>
-                                                <div class="div2 w-50 h-100">
-                                                        <h4>New Nike Black Airmax Shoes</h4>
-                                                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi modi minus eum debitis in? Aliquid doloribus, omnis eveniet inventore quod delectus dolores quia illum itaque dolorem, fuga recusandae at minus eum. Dolore exercitationem hic fugiat. Eaque, inventore soluta sunt voluptates nisi esse. Reprehenderit dolorem qui, dolores asperiores fuga illo eligendi!</p>
-                                                        <div class="price">
-                                                                <p>Price :</p>
-                                                                <p>120 <sup>$</sup></p>
-                                                                <p>96 <sup>$</sup></p>
-                                                        </div>
-                                                        <div class="size">
-                                                                <p>Size :</p>
-                                                                <ul class="list-unstyled">
-                                                                        <li>
-                                                                                <button>S</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>M</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>L</button>
-                                                                        </li>
-                                                                        <li>
-                                                                                <button>XL</button>
-                                                                        </li>
-                                                                </ul>
-                                                        </div>
-                                                        <button class="btn py-2 px-3 addToCartBtn">add to cart</button>
-                                                </div>
-                                        </div>
+                        <div class="content">
+                                <div class="row">
                                 </div>
                         </div>
                 </div>
         </section>
+
+        <div class="shopping-cart">
+                <div class="container p-3">
+                        <i class="close fa-regular fa-times-circle" onclick="closeCartShopping()"></i>
+                        <h2>Shop</h2>
+                        <p class="alert alert-warning w-100 text-center fs-6">There are no products</p>
+                        <div class="list-group">
+
+                        </div>
+                        <button class="btn btn-success buyNow d-none">Buy Now</button>
+                </div>
+        </div>
+
+        <div class="user-login">
+                <div class="container p-3">
+                        <div class="close fa-regular fa-times-circle" onclick="closeUserLogin()"></div>
+                        <h2>Login</h2>
+                        <div>
+                                <form action="" class="list-group">
+                                        <div class="list-group-item w-100 bg-transparent border-0 p-0">
+                                                <input type="text" placeholder="UserName *" class="w-100 p-2">
+                                        </div>
+                                        <div class="list-group-item w-100 bg-transparent border-0 p-0">
+                                                <input type="password" placeholder="Password *" class="w-100 p-2">
+                                        </div>
+                                        <button class="btn btn-success buyNow w-100">Login</button>
+                                </form>
+                        </div>
+                </div>
+        </div>
 
         <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="./js/shoes.js"></script>
@@ -241,3 +187,29 @@
         <script src="./js/main.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <div class="list-group-item">
+                                        <div class="item">
+                                                <div class="image">
+                                                        <img class="w-100" src="./images/products/10-1.png" alt="">
+                                                </div>
+                                                <h2 class="name"></h2>
+                                                <div class="price">
+                                                        <p>Price :</p>
+                                                        <p>120 <sup>$</sup></p>
+                                                        <p>96 <sup>$</sup></p>
+                                                </div>
+                                                <div class="size">
+                                                        <p>Size :</p>
+                                                        <span class="item-size">S</span>
+                                                </div>
+                                                <div class="color">
+                                                        <p>Color :</p>
+                                                        <span class="item-color"></span>
+                                                </div>
+                                                <button class="btn btn-danger w-100 removeBtn" onclick="removeItem(this)">Remove</button>
+                                        </div>
+                                </div> -->

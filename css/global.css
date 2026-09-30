@@ -5,13 +5,27 @@
         --secondColor: #0f7ad7;
         --thirdColor: #ed9721;
 }
-.mainColorText {
+.mainColor {
         color: var(--mainColor);
 }
-.mainColorBgColor {
+.mainBGColoropacity25 {
+        background-color: color-mix( in srgb, var(--mainColor) 20%, transparent 80%);
+        transition-duration: 200ms;
+}
+.mainBorder {
+        border: 1px solid var(--mainColor);
+}
+.mainButton {
+        border: 1px solid var(--mainColor);
         color: var(--mainColor);
+}
+.mainButton:hover {
+        background-color: color-mix( in srgb, var(--mainColor) 25%, transparent 75%);
 }
 body {
         font-family: 'Nunito', sans-serif;
-        height: 3000px;
+        position: relative;
+}
+body.no-scroll {
+        overflow: hidden;
 }

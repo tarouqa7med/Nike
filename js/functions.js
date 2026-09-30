@@ -25,16 +25,20 @@ function logoChanger(logo) {
 
 function correctLogoChanger(correct) {
 
-        let correctLogoImage = document.querySelector(".heading img"),
-                correctLogoImageSrc = correctLogoImage.src;
+        let correctLogoImages = document.querySelectorAll(".heading img");
         
-        let correctLogoImageArr = correctLogoImageSrc.split('/');
+        correctLogoImages.forEach(function (correctLogoImage) {
 
-        correctLogoImageArr[correctLogoImageArr.length - 1] = `${correct}-correct.png`;
+                correctLogoImageSrc = correctLogoImage.src;
+
+                let correctLogoImageArr = correctLogoImageSrc.split('/');
         
-        newImageSrc = correctLogoImageArr.join("/");
-        
-        correctLogoImage.setAttribute("src", newImageSrc);
+                correctLogoImageArr[correctLogoImageArr.length - 1] = `${correct}-correct.png`;
+                
+                newImageSrc = correctLogoImageArr.join("/");
+                
+                correctLogoImage.setAttribute("src", newImageSrc);
+        })
 
 }
 
@@ -44,71 +48,6 @@ function themeChanger(color, logo, correct) {
         logoChanger(logo);
         correctLogoChanger(correct);
 
-}
-
-function getLatestShoesData() {
-
-        for (let index = 0; index < latest.length; index++) {
-
-                let newPriceAfterDiscount = latest[index].price * (1 - latest[index].discount),
-                        imageIndex = 0, sizeIndex = 0;
-
-                latestLayout.innerHTML += `<div class="col">
-                                <div class="item p-4">
-                                        <div class="div1 w-50 h-100">
-                                                <div class="products-imgs">
-                                                        <div class="row">
-                                                                <img src="./images/Products/${latest[index].images[imageIndex++]}" alt="" data-image-number="1">
-                                                        </div>
-                                                        <div class="row">
-                                                                <img src="./images/Products/${latest[index].images[imageIndex++]}" alt="" data-image-number="2">
-                                                        </div>
-                                                        <div class="row">
-                                                                <img src="./images/Products/${latest[index].images[imageIndex++]}" alt="" data-image-number="3">
-                                                        </div>
-                                                        <div class="row">
-                                                                <img src="./images/Products/${latest[index].images[imageIndex++]}" alt="" data-image-number="4">
-                                                        </div>
-                                                </div>
-                                                <img src="./images/Products/${latest[index].images[0]}" alt="">
-                                        </div>
-                                        <div class="div2 w-50 h-100">
-                                                <h4>${latest[index].name}</h4>
-                                                <p class="description">${latest[index].description}</p>
-                                                <div class="price">
-                                                        <p>Price :</p>
-                                                        <p>${latest[index].price} <sup>$</sup></p>
-                                                        <p>${newPriceAfterDiscount} <sup>$</sup></p>
-                                                </div>
-                                                <div class="size">
-                                                        <p>Size :</p>
-                                                        <ul class="list-unstyled">
-                                                                <li>
-                                                                        <button>${latest[index].sizes[sizeIndex++]}</button>
-                                                                </li>
-                                                                <li>
-                                                                        <button>${latest[index].sizes[sizeIndex++]}</button>
-                                                                </li>
-                                                                <li>
-                                                                        <button>${latest[index].sizes[sizeIndex++]}</button>
-                                                                </li>
-                                                                <li>
-                                                                        <button>${latest[index].sizes[sizeIndex++]}</button>
-                                                                </li>
-                                                        </ul>
-                                                </div>
-                                                <button class="btn py-2 px-3 addToCartBtn">Add To Cart</button>
-                                        </div>
-                                </div>
-                        </div>`;
-                imageIndex = 0;
-                sizeIndex = 0;
-        }
-}
-
-function ChangeViewedImage(imageNumber) {
-        imageNumber = document.querySelector(`.latest .row img[data-image-number="${imageNumber}"]`);
-        console.log(imageNumber)
 }
 
 function checkScrolled() {
@@ -147,4 +86,66 @@ function updateNavLink(section_ID) {
                 currentActiveLink.classList.remove("active");
                 navLinkOfSection.classList.add("active");
         }
+}
+
+function loadingImages(imagesList) {
+
+        let li_Images = "";
+        imagesList.forEach(function (image, index) {
+                li_Images += `<li class="mainBorder rounded-2 p-2 ${(index == 0) ? 'mainBGColoropacity25' : ''}"><img class="img-fluid" src="./images/products/${image}" alt="" onclick="changeSelectedImage('${image}', this); changeActiveLiOfImage(this)"></li>`;
+        })
+        return li_Images;
+}
+
+function loadingPrices(price, discount) {
+        return `<p class="m-auto column-gap-2 text-center">
+                        <span class="price mainColor ${(discount == 0) ? 'd-none' : 'text-decoration-line-through'}">${price} <sup>$</sup></span>
+                        <span class="newPrice fw-bold">${(price * (1 - discount)).toFixed(2)} <sup>$</sup></span>
+                </p>`
+}
+
+function loadingSizes(sizesList) {
+
+        let li_Sizes = "";
+        sizesList.forEach(function (size, index) {
+                li_Sizes += `<li class="mainBorder mainColor rounded-2 ${(index == 0) ? 'active' : ''}">${size}</li>`;
+        })
+        return li_Sizes;
+}
+
+function loadingLi(LiList) {
+        
+        let li_Buttons = "";
+        LiList.forEach(function (li, index) {
+                li_Buttons += `<li class="mainButton rounded-circle ${(index == 0) ? 'active' : ''}" onclick="changeSelectedImage('${li}', this); changeActive(this);"></li>`;
+        })
+        return li_Buttons;
+}
+
+function changeActiveLiOfImage(that) {
+
+        ul = that.closest("ul");
+        ul.querySelector("li.mainBGColoropacity25").classList.remove("mainBGColoropacity25");
+        that.parentElement.classList.add("mainBGColoropacity25")
+
+}
+
+function changeSelectedImage(imageName, that) {
+
+        let selectedImage = that.closest(".product").querySelector(".selected-image img"),
+                selectedImageSrc = selectedImage.src;
+
+        let selectedImageSrcArr = selectedImageSrc.split("/");
+        selectedImageSrcArr[selectedImageSrcArr.length - 1] = imageName;
+        
+        let newSelectedImageSrc = selectedImageSrcArr.join("/");
+
+        selectedImage.setAttribute("src", newSelectedImageSrc)
+}
+
+function changeActive(that) {
+
+        let liActive = that.parentElement.querySelector("li.active");
+        liActive.classList.remove("active");
+        that.classList.add("active");
 }
