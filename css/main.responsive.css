@@ -1,0 +1,286 @@
+
+@media screen and (max-width: 371px)  {
+        .navbar .container-fluid > button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 {
+                padding: 25px;
+                margin-top: 20px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 10px 10px 0 0;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 li {
+                width: fit-content;
+                margin: auto;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse2 {
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 0 0 10px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container {
+                flex-direction: column;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part1 {
+                transform: translateY(40%);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:first-child {
+                width: 400px;
+                transform: translate(-15%, -55%) scale(0.35);
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(-15%, -15%) scale(0.35);
+                opacity: 1;
+                transition-duration: 1s;
+                transition-delay: 0.5s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:last-child {
+                transform: rotate(0deg) translate(-10%, -15%) scale(0);
+                width: 650px;
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transition-duration: 1s;
+                transform: rotate(-30deg) translate(-30%, -25%) scale(0.35);
+                opacity: 1;
+        }
+        #Latest .product .box1 .item ul li {
+                width: 25% !important;
+                height: 60px !important;
+        }
+        .modal.shopping-cart .container {
+                width: 80% !important;
+        }
+}
+@media screen and (min-width: 371px) and (max-width: 575.98px) {
+        .navbar .container-fluid > button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 {
+                padding: 25px;
+                margin-top: 20px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 10px 10px 0 0;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 li {
+                width: fit-content;
+                margin: auto;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse2 {
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 0 0 10px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container {
+                flex-direction: column;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part1 {
+                transform: translateY(40%);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:first-child {
+                width: 400px;
+                transform: translate(-15%, -55%) scale(0.5);
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(-5%, -25%) scale(0.5);
+                opacity: 1;
+                transition-duration: 1s;
+                transition-delay: 0.5s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:last-child {
+                transform: rotate(0deg) translate(-10%, -15%) scale(0);
+                width: 650px;
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transition-duration: 1s;
+                transform: rotate(-30deg) translate(-25%, -15%) scale(0.5);
+                opacity: 1;
+        }
+        #Latest .product .box1 .item ul li {
+                width: 25% !important;
+        }
+        #Featured .col-lg-3 {
+                width: 60% !important;
+                margin: auto;
+        }
+        .modal.shopping-cart .container {
+                width: 85% !important;
+        }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+        .navbar .container-fluid > button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 {
+                padding: 25px;
+                margin-top: 20px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 10px 10px 0 0;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 li {
+                width: fit-content;
+                margin: auto;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse2 {
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 0 0 10px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container {
+                flex-direction: column;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part1 {
+                transform: translateY(40%);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:first-child {
+                width: 400px;
+                transform: translate(-15%, -55%) scale(0.85);
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(0%, -25%) scale(0.85);
+                opacity: 1;
+                transition-duration: 1s;
+                transition-delay: 0.5s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part2 img:last-child {
+                transform: rotate(0deg) translate(-10%, -15%) scale(0);
+                width: 650px;
+                opacity: 0;
+                transition-duration: 0s;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transition-duration: 1s;
+                transform: rotate(-30deg) translate(-10%, -15%) scale(0.75);
+                opacity: 1;
+        }
+        #Featured .col-lg-3 {
+                width: 50% !important;
+        }
+        .modal.shopping-cart .container .content .col-lg-4 {
+                width: 50% !important;
+        }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+        .navbar .container-fluid > button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 {
+                padding: 25px;
+                margin-top: 20px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 10px 10px 0 0;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse1 li {
+                width: fit-content;
+                margin: auto;
+        }
+        .navbar .container-fluid ul.navbar-nav.collapse2 {
+                padding-bottom: 20px;
+                margin-bottom: 10px;
+                background: #ada996;
+                background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+                background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+                border-radius: 0 0 10px 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part1 p {
+                max-width: 300px;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(-20%, -15%) scale(0.65);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transform: rotate(-30deg) translate(-30%, -15%) scale(0.65);
+        }
+        #Featured .col-lg-3 {
+                width: 50% !important;
+        }
+        
+        .modal.shopping-cart .container .content .col-lg-4 {
+                width: 50% !important;
+        }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part1 p {
+                max-width: 400px;
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(-15%, -25%) scale(0.9);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transform: rotate(-30deg) translate(-15%, -15%) scale(0.9);
+        }
+}
+@media screen and (min-width: 1200px) and (max-width: 1299.98px) {
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:first-child {
+                transform: translate(-15%, -25%) scale(1);
+        }
+        .my-carousel .my-carousel-inner .my-carousel-item.active .container .col.part2 img:last-child {
+                transform: rotate(-30deg) translate(-15%, -15%) scale(1);
+        }
+}
+@media screen and (min-width: 1300px) {
+        .my-carousel .my-carousel-inner .my-carousel-item .container .col.part1 h2 {
+                font-size: 50px;
+        }
+        .my-carousel button.prev,
+        .my-carousel button.next {
+                top: 50%;
+                transform: translateY(-50%);
+        }
+        .my-carousel button.prev {
+                left: 20px;
+        }
+        .my-carousel button.next {
+                right: 20px;
+        }
+}

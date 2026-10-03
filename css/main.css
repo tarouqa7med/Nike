@@ -17,7 +17,6 @@
 .navbar {
         position: fixed;
         z-index: 1000;
-        height: 90px;
         background: rgba(173, 169, 150, .5);
         background: -webkit-linear-gradient(to right,rgba(234,234,234,.5),rgba(219,219,219,.5),rgba(242,242,242,.5),rgba(173,169,150,.5));
         background: linear-gradient(to right, rgba(234, 234, 234, .5), rgba(219, 219, 219, .5), rgba(242, 242, 242, .5), rgba(173, 169, 150, .5));
@@ -43,9 +42,8 @@
         width: 100%;
 }
 .navbar .container-fluid > button {
-        padding-block: 6px;
+        padding-block: 10px;
         border-color: var(--mainColor);
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -53,33 +51,33 @@
         transition-duration: 500ms;
         display: none;
 }
-.navbar .container-fluid > button:active {
+.navbar .container-fluid > button:focus {
         box-shadow: unset;
 }
 .navbar .container-fluid >button span {
         background-color: var(--mainColor);
-        width: 20px;
+        width: 25px;
         height: 2px;
 }
 .navbar .container-fluid .navbar-collapse ul {
         margin-left: auto;
         margin-right: 0;
 }
-.navbar .container-fluid .navbar-collapse.navbar-collapse.collapse1 ul {
+.navbar .container-fluid ul.navbar-nav.collapse1 {
         gap: 35px;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a {
         color: #777777;
         text-decoration: none;
         letter-spacing: 1.5px;
         position: relative;
         transition-duration: 500ms;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a.active {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a.active {
         color: var(--mainColor);
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a::before,
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a::after {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a::before,
+.navbar .container-fluid ul.navbar-nav.collapse1 li a::after {
         content: "";
         position: absolute;
         width: 35%;
@@ -88,48 +86,48 @@
         transition-duration: 500ms;
         opacity: 0;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a::before {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a::before {
         top: -10px;
         left: -20px;
         border-top: 1px solid var(--mainColor);
         border-left: 1px solid var(--mainColor);
         opacity: 0;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a::after {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a::after {
         bottom: -10px;
         right: -20px;
         border-bottom: 1px solid var(--mainColor);
         border-right: 1px solid var(--mainColor);
         opacity: 0;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a:hover::before {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a:hover::before {
         opacity: 1;
         left: -10px;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a:hover::after {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a:hover::after {
         opacity: 1;
         right: -10px;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a.active::before,
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a.active::after {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a.active::before,
+.navbar .container-fluid ul.navbar-nav.collapse1 li a.active::after {
         opacity: 1;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a.active::before {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a.active::before {
         left: -10px;
 }
-.navbar .container-fluid .navbar-collapse.collapse1 ul li a.active::after {
+.navbar .container-fluid ul.navbar-nav.collapse1 li a.active::after {
         right: -10px;
 }
-.navbar .container-fluid .navbar-collapse.collapse2 ul {
+.navbar .container-fluid ul.navbar-nav.collapse2 {
         gap: 15px;
 }
-.navbar .container-fluid .navbar-collapse.collapse2 ul li {
+.navbar .container-fluid ul.navbar-nav.collapse2 li {
         color: #777777;
         font-size: larger;
         transition-duration: 500ms;
         cursor: pointer;
 }
-.navbar .container-fluid .navbar-collapse.collapse2 ul li:hover {
+.navbar .container-fluid ul.navbar-nav.collapse2 li:hover {
         color: var(--mainColor);
 }
 .my-carousel {
@@ -256,7 +254,6 @@
 .my-carousel button.prev {
         right: 70px;
 }
-
 .my-carousel button:hover {
         background-color: var(--mainColor);
         color: white;
@@ -308,7 +305,6 @@
         transform: translate(-50%, -50%);
         filter: drop-shadow( 2px 2px 1px #00000080);
         letter-spacing: 2px;
-        z-index: 1;
 }
 .container .heading img {
         position: absolute;
@@ -377,6 +373,7 @@
         position: relative;
         overflow: hidden;
 }
+
 #Featured .product .discount {
         color: white;
         top: 25px;

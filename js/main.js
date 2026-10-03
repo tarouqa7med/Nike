@@ -5,6 +5,7 @@ let carousel = document.querySelector(".my-carousel"),
         prevBtn = carousel.querySelector("button.prev"),
         html = document.querySelector("html"),
         navbar = document.querySelector("nav.navbar"),
+        uls = document.querySelector(".uls"),
         navLinks = navbar.querySelectorAll(".nav-item a"),
         sections = document.querySelectorAll("section, header"),
         loadingPage = document.querySelector(".loadingPage"),
@@ -148,7 +149,7 @@ features.forEach(function (product) {
                                                 </ul>
                                         </div>
                                         <div class="body">
-                                                <h4 class="fs-6">Basketball Shoes</h4>
+                                                <h4 class="fs-6">${product.name}</h4>
                                                 ${loadingPrices(product.price, product.discount, false)}
                                         </div>
                                 </div>

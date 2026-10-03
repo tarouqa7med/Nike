@@ -235,7 +235,7 @@ function openProduct(product_id) {
                         </div>
                         <div class="col-lg-6">
                                 <div class="item">
-                                        <h3>Basketball Shoes</h3>
+                                        <h3>${product.name}</h3>
                                         <p class="price">
                                                 ${loadingPrices(product.price, product.discount, true)}
                                         </p>
@@ -332,6 +332,7 @@ function showCart() {
 
         if (cartArr.length == 0) {
                 cartContainer.innerHTML = `<p class="alert alert-warning w-100 text-center fs-6 m-auto" style="max-width: 95%">There are no products</p>`;
+                document.querySelector(".buyNow").classList.add("d-none");
         } else if (cartArr.length != 0) {
                 cartContainer.innerHTML = ``;
                 cartArr.forEach(function (cartProduct) {
@@ -341,7 +342,7 @@ function showCart() {
                                         <div class="item">
                                                 <div class="product bg-light rounded-3 px-3" data-product-id="${product.id}">
                                                         <img class="img-fluid d-block m-auto" src="./images/products/${product.images[0]}" alt="">
-                                                        <h2 class="name">sssss...</h2>
+                                                        <h2 class="name">${product.name.slice(0, 12)}...</h2>
                                                         <div class="price d-flex align-items-center mb-3">
                                                                 <div class="label fw-bolder fs-6 me-3">Price :</div>
                                                                 <div class="value">
@@ -370,6 +371,7 @@ function showCart() {
                                 </div>
                         `
                 })
+                document.querySelector(".buyNow").classList.remove("d-none");
         }
 
 
@@ -391,6 +393,7 @@ function removeFromShop(product_id) {
         if (cartArr.length == 0) {
                 let cartContainer = document.querySelector(".modal.shopping-cart .container .content");
                 cartContainer.innerHTML = `<p class="alert alert-warning w-100 text-center fs-6 m-auto" style="max-width: 95%">There are no products</p>`;
+                document.querySelector(".buyNow").classList.add("d-none");
         }
 
 }
