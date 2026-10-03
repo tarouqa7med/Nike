@@ -67,14 +67,14 @@ navLinks.forEach(function (navLink) {
         })
 })
 
-// window.addEventListener("DOMContentLoaded", function () {
-//         setTimeout(() => {
-//                 loadingPage.classList.add("hide");
-//         }, 1500);
-//         setTimeout(() => {
-//                 loadingPage.classList.add("d-none");
-//         }, 2501);
-// })
+window.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+                loadingPage.classList.add("hide");
+        }, 1500);
+        setTimeout(() => {
+                loadingPage.classList.add("d-none");
+        }, 2501);
+})
 
 let latestContainer = document.querySelector("#Latest .content");
 
