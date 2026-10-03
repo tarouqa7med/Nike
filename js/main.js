@@ -7,7 +7,14 @@ let carousel = document.querySelector(".my-carousel"),
         navbar = document.querySelector("nav.navbar"),
         navLinks = navbar.querySelectorAll(".nav-item a"),
         sections = document.querySelectorAll("section, header"),
-        loadingPage = document.querySelector(".loadingPage");
+        loadingPage = document.querySelector(".loadingPage"),
+        cartArr = [];
+
+if (localStorage.getItem("cartArr") == null) {
+        updateLocalStorage();
+} else {
+        cartArr = JSON.parse(localStorage.getItem("cartArr"));
+}
 
 checkScrolled();
 
@@ -21,7 +28,6 @@ nextBtn.addEventListener("click", function () {
         nextCarouselItem.classList.add("active");
 
         themeChanger(dataColor, dataColor, dataColor);
-        console.log("done1")
 })
 
 prevBtn.addEventListener("click", function () {
@@ -33,8 +39,6 @@ prevBtn.addEventListener("click", function () {
         prevCarouselItem.classList.add("active");
 
         themeChanger(dataColor, dataColor, dataColor);
-                console.log("done2")
-
 })
 
 
@@ -74,15 +78,18 @@ navLinks.forEach(function (navLink) {
 let latestContainer = document.querySelector("#Latest .content");
 
 latest.forEach(function (product) {
+
+        let isProductInCart = checkProductInCart(product.id);
+        
         latestContainer.innerHTML += `
-                <div class="product mainBorder  mb-3 p-4 rounded-3 bg-light">
+                <div class="product mainBorder mb-3 p-4 rounded-3 bg-light" data-selected-size="${(isProductInCart?.size) ?? product.sizes[0]}" data-selected-color="${(isProductInCart?.color) ?? product.colors[0]}" data-product-id='${product.id}'>
                         <div class="row">
                                 <div class="col-lg-6 part1 d-flex align-items-center">
                                         <div class="item">
                                                 <div class="row">
                                                         <div class="col-lg-2 box1">
                                                                 <div class="item">
-                                                                        <ul class="list-unstyled d-flex flex-row column-gap-3 flex-lg-column row-gap-lg-2 column-gap -lg-3">
+                                                                        <ul class="list-unstyled d-flex justify-content-center flex-row column-gap-3 flex-lg-column row-gap-lg-2 column-gap -lg-3">
                                                                                 ${loadingImages(product.images)}
                                                                         </ul>
                                                                 </div>
@@ -90,7 +97,7 @@ latest.forEach(function (product) {
                                                         <div class="col-lg-10 box2">
                                                                 <div class="item">
                                                                         <div class="selected-image">
-                                                                                <img class="w-100" src="./images/products/${product.images[0]}" alt="">
+                                                                                <img class="w-100" style="display: block; margin: auto;" src="./images/products/${product.images[0]}" alt="">
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -104,18 +111,18 @@ latest.forEach(function (product) {
                                                 <div class="price d-flex align-items-center">
                                                         <div class="label fw-bolder fs-6 me-3">Price :</div>
                                                         <div class="value">
-                                                                ${loadingPrices(product.price, product.discount)}
+                                                                ${loadingPrices(product.price, product.discount, false)}
                                                         </div>
                                                 </div>
                                                 <div class="size d-flex align-items-center">
                                                         <div class="label fw-bolder fs-6 me-3">Size :</div>
                                                         <div class="value">
                                                                 <ul class="list-unstyled d-flex column-gap-2 m-auto">
-                                                                        ${loadingSizes(product.sizes)}
+                                                                        ${loadingSizes(product.sizes, isProductInCart)}
                                                                 </ul>
                                                         </div>
                                                 </div>
-                                                <button class="btn addToCartBtn">Add To Cart</button>
+                                                ${(isProductInCart==null) ? `<button class="btn addToCartBtn" onclick="addToCart(${product.id}, this)">Add To Cart</button>` : `<button class="btn addToCartBtn remove" onclick="removeFromCart(${product.id}, this)">Remove From Cart</button>`}
                                         </div>
                                 </div>
                         </div>
@@ -135,14 +142,14 @@ features.forEach(function (product) {
                                                 <div class="selected-image">
                                                         <img class="img-fluid" src="./images/products/${product.images[0]}" alt="">
                                                 </div>
-                                                <i class="fa-solid fa-search search-icon pb-0 mb-3" onclick="openModal('product')"></i>
+                                                <i class="fa-solid fa-search cursorPointer search-icon pb-0 mb-3" onclick="openModal('product'); openProduct(${product.id})"></i>
                                                 <ul class="list-unstyled d-flex column-gap-2">
                                                         ${loadingLi(product.images)}
                                                 </ul>
                                         </div>
                                         <div class="body">
                                                 <h4 class="fs-6">Basketball Shoes</h4>
-                                                ${loadingPrices(product.price, product.discount)}
+                                                ${loadingPrices(product.price, product.discount, false)}
                                         </div>
                                 </div>
                         </div>
@@ -157,3 +164,4 @@ modalContainers.forEach(function(modalContainer) {
                 event.stopPropagation();
         })
 })
+

@@ -47,7 +47,7 @@
                                         <li>
                                                 <i class="fa-solid fa-heart"></i>
                                         </li>
-                                        <li onclick="openModal('shopping-cart')">
+                                        <li onclick="showCart()">
                                                 <i class="fa-solid fa-shopping-cart"></i>
                                         </li>
                                         <li onclick="openModal('user-login')">
@@ -114,12 +114,12 @@
                 <div class="Offers">
                         <div class="row g-0">
                                 <div class="col-lg-6 part1">
-                                        <div class="item">
+                                        <div class="item cursorPointer">
                                                 <img class="img-fluid w-100" src="./images/home-banner-1.png" alt="">
                                         </div>
                                 </div>
                                 <div class="col-lg-6 part2">
-                                        <div class="item">
+                                        <div class="item cursorPointer">
                                                 <img class="img-fluid w-100" src="./images/home-banner-2.png" alt="">
                                         </div>
                                 </div>
@@ -152,21 +152,22 @@
         </section>
 
         <div class="modal shopping-cart w-100 vh-100" data-modal-name="shopping-cart" onclick="closeModal();">
-                <div class="container p-3 rounded-3">
-                        <i class="close fa-regular fa-times-circle mainColor" onclick="closeModal();"></i>
-                        <h2>Shop</h2>
-                        <p class="alert alert-warning w-100 text-center fs-6">There are no products</p>
-                        <div class="list-group">
-
+                <div class="container p-3 rounded-3 mainBorder">
+                        <i class="close fa-regular fa-times-circle mainColor cursorPointer" onclick="closeModal();"></i>
+                        <h2 class="mainColor text-center pb-4">Shop</h2>
+                        <div class="column-gap-3">
+                                <div class="row content">
+                                        
+                                </div>
                         </div>
-                        <button class="btn btn-success buyNow d-none">Buy Now</button>
+                        <button class="btn btn-success mt-3 w-100 buyNow">Buy Now</button>
                 </div>
         </div>
 
         <div class="modal user-login w-100 vh-100" data-modal-name="user-login" onclick="closeModal();">
-                <div class="container p-3 rounded-3">
+                <div class="container p-3 rounded-3 mainBorder">
                         <div class="head">
-                                <div class="close fa-regular fa-times-circle mainColor" onclick="closeModal();"></div>
+                                <div class="close fa-regular fa-times-circle mainColor cursorPointer" onclick="closeModal();"></div>
                                 <h2 class="mainColor text-center pb-3 mt-2">Login</h2>
                         </div>
                         <div class="body">
@@ -184,70 +185,14 @@
         </div>
 
         <div class="modal dataOfProduct w-100 vh-100" data-modal-name="product" onclick="closeModal();">
-                <div class="container p-3 rounded-3">
-                        <div class="content">
-                                <div class="product  mb-3 p-4 rounded-3">
-                                        <div class="row">
-                                                <div class="col-lg-6 part1 d-flex align-items-center">
-                                                        <div class="item">
-                                                                <div class="row">
-                                                                        <div class="col-lg-3 box1">
-                                                                                <div class="item">
-                                                                                        <div class="col-lg-10 box2">
-                                                                                                <div class="item">
-                                                                                                        <div class="selected-image">
-                                                                                                                <img class="w-100" src="./images/products/10-1.png" alt="">
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <ul class="list-unstyled row">
-                                                                                                <li class="mainBorder rounded-2 p-2 active"><img class="img-fluid" src="./images/products/10-1.png" alt="" onclick="changeSelectedImage('${image}', this); changeActiveLiOfImage(this)"></li>
-                                                                                                <li class="mainBorder rounded-2 p-2"><img class="img-fluid" src="./images/products/10-1.png" alt="" onclick="changeSelectedImage('${image}', this); changeActiveLiOfImage(this)"></li>
-                                                                                                <li class="mainBorder rounded-2 p-2"><img class="img-fluid" src="./images/products/10-1.png" alt="" onclick="changeSelectedImage('${image}', this); changeActiveLiOfImage(this)"></li>
-                                                                                                <li class="mainBorder rounded-2 p-2"><img class="img-fluid" src="./images/products/10-1.png" alt="" onclick="changeSelectedImage('${image}', this); changeActiveLiOfImage(this)"></li>
-                                                                                        </ul>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="col-lg-6 part2">
-                                                        <div class="item">
-                                                                <h2 class="fs-3">Basketball Shoes</h2>
-                                                                <div class="value">
-                                                                        <p class="m-auto column-gap-2">
-                                                                                <span class="price mainColor text-decoration-line-through">120 <sup>$</sup></span>
-                                                                                <span class="newPrice fw-bold">100 <sup>$</sup></span>
-                                                                        </p>
-                                                                </div>
-                                                                <hr>
-                                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, aspernatur. Eveniet, fugiat recusandae voluptatum odio placeat aperiam impedit architecto quod modi, possimus qui doloremque, vel aut! Eius totam sed numquam.</p>
-                                                                <div class="size d-flex align-items-center">
-                                                                        <div class="label fw-bolder fs-6 me-3 fw-bolder">Size :</div>
-                                                                        <div class="value">
-                                                                                <ul class="list-unstyled d-flex column-gap-2 m-auto">
-                                                                                        <li class="mainBorder mainColor rounded-2 active" onclick="changeActive(this)">S</li>
-                                                                                        <li class="mainBorder mainColor rounded-2" onclick="changeActive(this)">M</li>
-                                                                                </ul>
-                                                                        </div>
-                                                                </div>
-                                                                <div class="color d-flex align-items-center">
-                                                                        <div class="label fw-bolder fs-6 me-3 fw-bolder">Color :</div>
-                                                                        <div class="value">
-                                                                                <ul class="list-unstyled d-flex column-gap-2 m-auto">
-                                                                                        <li class="mainBorder mainColor rounded-circle active" onclick="changeActive(this)"></li>
-                                                                                        <li class="mainBorder mainColor rounded-circle" onclick="changeActive(this)"></li>
-                                                                                </ul>
-                                                                        </div>
-                                                                </div>
-                                                                <button class="btn mainBorder mainColor addToCartBtn">Add To Cart</button>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+                <div class="container p-4 pb-1 rounded-3 mainBorder">
+
                 </div>
         </div>
+
+        <footer class="p-2 text-center">
+                © 2021 <span>SemiCode</span>, Ltd. | All Rights Reserved .
+        </footer>
 
         <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="./js/shoes.js"></script>

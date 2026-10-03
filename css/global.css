@@ -1,15 +1,26 @@
 
+@font-face {
+        font-family: 'Agency';
+        src: url("./Font_Family/Agency/Agency.woff2");
+}
 :root {
         --mainColor: #fb2527;
         --firstColor: #fb2527;
         --secondColor: #0f7ad7;
         --thirdColor: #ed9721;
 }
+.mainBG {
+        background-color: var(--mainColor);
+}
 .mainColor {
         color: var(--mainColor);
 }
-.mainBGColoropacity25 {
-        background-color: color-mix( in srgb, var(--mainColor) 20%, transparent 80%);
+.mainBGColoropacity05 {
+        background-color: color-mix( in srgb, var(--mainColor) 5%, transparent 95%);
+        transition-duration: 200ms;
+}
+.mainBGColoropacity15 {
+        background-color: color-mix( in srgb, var(--mainColor) 15%, transparent 85%);
         transition-duration: 200ms;
 }
 .mainBorder {
@@ -21,6 +32,9 @@
 }
 .mainButton:hover {
         background-color: color-mix( in srgb, var(--mainColor) 25%, transparent 75%);
+}
+.cursorPointer {
+        cursor: pointer;
 }
 html {
         scrollbar-color: var(--mainColor) color-mix( in srgb, var(--mainColor) 35%, transparent 65%);
@@ -34,4 +48,25 @@ body {
 }
 body.no-scroll {
         overflow: hidden;
+}
+.addToCartBtn {
+        border: 1px solid var(--mainColor);
+        color: var(--mainColor);
+}
+.addToCartBtn:hover {
+        background-color: var(--mainColor);
+        color: white;
+}
+.addToCartBtn.remove,
+.addToCartBtn.remove:active {
+        color: var(--bs-warning);
+        border: 1px solid var(--bs-warning);
+}
+.addToCartBtn.remove:hover {
+        color: white;
+        background-color: var(--bs-warning);
+}
+.buyNow {
+        color: var(--bs-success);
+        background-color: transparent;
 }
